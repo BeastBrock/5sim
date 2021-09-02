@@ -6,7 +6,6 @@ from main import watermark
 from main import discordbot
 from main import MP_Error
 from main import MRA_Error
-from main import discordbot
 from main import asyncio
 from main import time
 
