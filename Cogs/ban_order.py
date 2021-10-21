@@ -14,6 +14,7 @@ class ban_activation_number(commands.Cog):
 
     @cog_ext.cog_slash(name="banorder", description="ban a ordered number (useful if the number is invalid)")
     async def ban_order(self, ctx, order_id):
+        Log(ctx.message.author, 'banorder')
         try:
             await ctx.defer(hidden=True)
             result = api_keys_collection.find_one({"_id": ctx.author.id})

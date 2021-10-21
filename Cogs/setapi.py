@@ -25,9 +25,8 @@ class mongodb(commands.Cog):
 
     @cog_ext.cog_slash(name="setapi")
     async def set_apikey(self, ctx, api_key):
-
+        Log(ctx.message.author, 'setapi')
         try:
-
             self.key = api_key
             headers = {
                 "Authorization": "Bearer " + api_key,

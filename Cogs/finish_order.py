@@ -6,6 +6,7 @@ from main import watermark
 from main import discordbot
 from main import MP_Error
 from main import MRA_Error
+from main import discordbot
 from main import asyncio
 from main import time
 
@@ -18,6 +19,7 @@ class finish_activation_number(commands.Cog):
 
     @cog_ext.cog_slash(name="finishorder", description="finish a ordered number (useful if you sucessfully verified a Account)")
     async def finish_order(self, ctx, order_id):
+        Log(ctx.message.author, 'finishorder')
         try:
             await ctx.defer(hidden=True)
             result = api_keys_collection.find_one({"_id": ctx.author.id})

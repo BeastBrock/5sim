@@ -14,6 +14,7 @@ class checkapi(commands.Cog):
 
     @cog_ext.cog_slash(name="checkapi", description="check if a request to 5sim is successful")
     async def check_api_status(self, ctx):
+        Log(ctx.message.author, 'checkapi')
         await ctx.defer(hidden=True)
 
         try:

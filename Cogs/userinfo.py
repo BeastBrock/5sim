@@ -13,6 +13,7 @@ class userinfo(commands.Cog):
 
     @cog_ext.cog_slash(name="userinfo", description="Grab infrmations about your 5sim account (only visible to you to avoid leaking private informations)")
     async def userinformation(self, ctx):
+        Log(ctx.message.author, 'userinfo')
         try:
             await ctx.defer(hidden=True)
             result = api_keys_collection.find_one({"_id": ctx.author.id})

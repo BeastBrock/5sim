@@ -18,6 +18,7 @@ class order_activation_number(commands.Cog):
 
     @cog_ext.cog_slash(name="buynumber", description="Order a phonenumber (useful to verify different types of Accounts)")
     async def buy_activation_number(self, ctx, service, country, operator):
+        Log(ctx.message.author, 'buynumber')
         try:
             await ctx.defer(hidden=True)
 
@@ -91,6 +92,7 @@ class order_activation_number(commands.Cog):
 
     @cog_ext.cog_slash(name="checkorder", description="checks a ordered number (useful to see the status of the orderd number & get the sms code)")
     async def check_activation_number(self, ctx, order_id):
+        Log(ctx.message.author, 'checkorder')
         try:
             await ctx.defer(hidden=True)
 

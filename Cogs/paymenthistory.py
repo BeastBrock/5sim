@@ -13,6 +13,7 @@ class payment_history(commands.Cog):
 
     @cog_ext.cog_slash(name="paymenthistory", description="shows Informations about the last 5sim topup you made")
     async def payment_history(self, ctx):
+        Log(ctx.message.author, 'paymenthistory')
         try:
             await ctx.defer(hidden=True)
             result = api_keys_collection.find_one({"_id": ctx.author.id})

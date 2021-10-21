@@ -14,6 +14,7 @@ class Cryptoprice(commands.Cog):
 
     @cog_ext.cog_slash(name="crypto", description="Converts 1 Bitcoin & 1 Litecoin in Rubel (Russian Currency)")
     async def cryptoprice(self, ctx):
+        Log(ctx.message.author, 'cryptoprice')
         await ctx.defer(hidden=True)
 
         try:

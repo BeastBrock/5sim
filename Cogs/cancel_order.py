@@ -14,6 +14,7 @@ class cancel_activation_number(commands.Cog):
 
     @cog_ext.cog_slash(name="cancelorder", description="cancel a ordered number (useful if no sms is being sent & refound your founds)")
     async def cancel_order(self, ctx, order_id):
+        Log(ctx.message.author, 'cancelorder')
         try:
             await ctx.defer(hidden=True)
             result = api_keys_collection.find_one({"_id": ctx.author.id})

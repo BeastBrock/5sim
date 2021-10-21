@@ -29,8 +29,16 @@ try:
 
         discordbot = commands.Bot(command_prefix=prefix, case_insensitive=True, self_bot=False, intents=discord.Intents.all())
         discordbot.remove_command("help")
-        # guild_slash_ids = [850380692583481365]
         slash = SlashCommand(discordbot, sync_commands=True, sync_on_cog_reload=True)
+
+
+        def Log(user, command):
+            timestamp = str(datetime.now().strftime('%Y-%M-%d %H:%M:%S'))
+            print(f"{colorama.Fore.RESET}"
+                  f"[{colorama.Fore.GREEN}{timestamp}{colorama.Fore.RESET}] "
+                  f"USER {colorama.Fore.YELLOW}{str(user)} {colorama.Fore.RESET}USED THE COMMAND {colorama.Fore.YELLOW}{command}")
+            with open('[Data]/logs.txt', 'a', encoding='utf-8') as f: f.write(f'[{timestamp}] USER {str(user)} USED THE COMMAND {command}\n')
+
 
         # ------------------------ LOAD COGS ------------------------ #
         if __name__ == '__main__':
@@ -45,6 +53,6 @@ try:
 
             print(f"{Fore.YELLOW}[>] {Fore.LIGHTCYAN_EX}Discordbot is ready!")
             discordbot.run(token)
-        config.close()
 
-except Exception: raise Exception
+finally:
+    conf.close()
