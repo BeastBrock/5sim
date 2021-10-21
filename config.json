@@ -1,7 +1,0 @@
-{
-
-  "Database url": "mongodb+srv://your_srv_cluster_url_here",
-  "Database Name": "API_Keys",
-  "Discordbot Prefix": "put anything random => the bot got updated to slashcommands",
-  "Discordbot Token": "The Bottoken. Make sure to use discord.py-self if you want to run it on your useraccount."
-}
