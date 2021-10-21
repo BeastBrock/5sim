@@ -1,0 +1,6 @@
+cloudscraper
+discord
+time
+colorama
+discord-py-slash-command
+pymongo
