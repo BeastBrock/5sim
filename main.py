@@ -47,4 +47,4 @@ try:
             discordbot.run(token)
 
 finally:
-    conf.close()
+    config.close()
