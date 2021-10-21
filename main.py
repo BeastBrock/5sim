@@ -45,6 +45,7 @@ try:
 
             print(f"{Fore.YELLOW}[>] {Fore.LIGHTCYAN_EX}Discordbot is ready!")
             discordbot.run(token)
+        config.close()
 
-finally:
-    config.close()
+expect Expection:
+    raise Expection
