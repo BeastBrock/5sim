@@ -47,5 +47,4 @@ try:
             discordbot.run(token)
         config.close()
 
-expect Expection:
-    raise Expection
+except Exception: raise Exception
