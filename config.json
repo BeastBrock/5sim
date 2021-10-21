@@ -1,0 +1,7 @@
+{
+
+  "Database url": "mongodb+srv://your_srv_databaseurl_get_it_on_mongodb_website",
+  "Database Name": "API_Keys",
+  "Discordbot Prefix": "put anythinf random here. the code got updated to use slashcommands so the prefix here is not important",
+  "Discordbot Token": "set your discord bottoken here"
+}
