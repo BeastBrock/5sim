@@ -20,7 +20,7 @@ try:
         requests = cloudscraper.create_scraper()
         prefix = config.get("Discordbot Prefix")
         token = config.get("Discordbot Token")
-        watermark = "created by ★MoneyDrop★#2921"
+        watermark = "created by raibonn2nd#3717"
 
         # headers = {
         #     "Authorization": "Bearer " + self.bot.get_cog("MongoDB").api_key,
